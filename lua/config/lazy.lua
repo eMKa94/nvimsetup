@@ -40,11 +40,11 @@ vim.keymap.set({'n', 'x'}, 'gp', '"+p') -- use gp to paste from clipboard
 vim.keymap.set({'n', 'x'}, 'x', '"_x') -- delete without storing in register
 vim.keymap.set({'n', 'x'}, 'X', '"_d') -- delete without storing in register
 
--- TODO: How to make nvim transparent as the root terminal is ?
--- vim.opt.highlight Normal ctermbg=none
--- vim.opt.highlight NonText ctermbg=none
--- vim.opt.highlight Normal guibg=none
--- vim.opt.highlight NonText guibg=none
+-- Make nvim transparent as the root terminal is
+vim.cmd([[highlight Normal ctermbg=none]])
+vim.cmd([[highlight NonText ctermbg=none]])
+vim.cmd([[highlight Normal guibg=none]])
+vim.cmd([[highlight NonText guibg=none]])
 
 -- Setup lazy.nvim
 require("lazy").setup({
